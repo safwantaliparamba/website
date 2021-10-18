@@ -1,307 +1,415 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Safwan Taliparamba</title>
-<script src="resp.js"></script>
-<link rel="stylesheet" href="resp.css">
-<link rel="icon" href="data:image/jpeg;base64,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" type="image/gif" sizes="16x16">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://kit.fontawesome.com/4e677abed3.js" crossorigin="anonymous"></script>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Safwan Taliparamba</title>
+    <script src="resp.js"></script>
+    <link rel="stylesheet" href="resp.css" />
+    <link
+      rel="icon"
+      href="data:image/jpeg;base64,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"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4e677abed3.js"
+      crossorigin="anonymous"
+    ></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-
-
-</head>
-<body>
-      <!--header-->
-  <header class="col-md-12 position-fixed header"  style="z-index: 1;">
-      <div class="container-fluid ">
-        <div class="row navhead  my-auto" >
-          <div class="col-md-2 col-4  my-auto p-4" style="float: left;">
-            <div id="mySidenav" class="sidenav" >
-              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--header-->
+    <header class="col-md-12 position-fixed header" style="z-index: 1">
+      <div class="container-fluid">
+        <div class="row navhead my-auto">
+          <div class="col-md-2 col-4 my-auto p-4" style="float: left">
+            <div id="mySidenav" class="sidenav">
+              <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+                >&times;</a
+              >
               <a href="#home">Home</a>
               <a href="#services">Services</a>
               <a href="#skills">Skills</a>
-              
+
               <a href="#contact">Contact</a>
             </div>
-            <span style="font-size:30px;cursor:pointer;color:#00ff84;" onclick="openNav()">&#9776;</span>
-  
+            <span
+              style="font-size: 30px; cursor: pointer; color: #00ff84"
+              onclick="openNav()"
+              >&#9776;</span
+            >
           </div>
-          <div class="col-md-10 col-8 my-auto mx-auto" style="float: left;">
-            <a href=""><span><h1 style="color:white;float: left;">.</h1></span><span><h1 style="color:#00ff84;float: left;margin-top: 10px;">SAFWAN.</h1></span>
+          <div class="col-md-10 col-8 my-auto mx-auto" style="float: left">
+            <a href=""
+              ><span><h1 style="color: white; float: left">.</h1></span
+              ><span
+                ><h1 style="color: #00ff84; float: left; margin-top: 10px">
+                  SAFWAN.
+                </h1></span
+              >
             </a>
           </div>
         </div>
       </div>
-  </header>
+    </header>
 
-  <!--home section-->
+    <!--home section-->
 
-  <section class=" p-5 col-md-12  " style="background: #00ff84;width: 100%;height: 100vh;" id="home">
-    <div class="container-fluid" style="margin-top: 9em;">
-      <div class="row align-items-center ">
-        <div class="col-md-6 col-12 ">
-          <img class="mr-auto ml-auto imgpro mx-auto d-block rounded-circle img-fluid" src="IMG_8459 (3).jpg" alt="">
-
-        </div>
-        <div class="col-md-6 col-12 my-auto  justify-content-center p-5">
-
-          <h1 class=" text-center">SAFWAN</h1>
-          <h6 class="text-center" style="margin-top: 2px;">Front End Web Developer</h6>
-          
- 
-        </div>
-       
-
-
-        
-
-      </div>
-    </div>
-  </section>
-
-
-  
-  <!--home-section -ends-->
-
-  <!--sevice section-->
-  <section style="background:black;" >
-        <div class="container-fluid">
-          <div class="row"  id="services">
-            <div >
-              <h1  class="text-center mt-5" style="color: #00ff84; ">Services</h1>
-              
-            </div>
-            <div class="col-md-4 col-12 p-5 pl-5 d-flex justify-content-center">
-              
-              <div class="card ml-3" style="width: 16rem;">
-                <img class="card-img-top img-fluid cardimg " src="top11.webp" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title text-center">WEB DEVELOPER<br>(Frontend)</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  
-                </div>
-            </div>
+    <section
+      class="p-5 col-md-12"
+      style="background: #00ff84; width: 100%;"
+      id="home"
+    >
+      <div class="container-fluid mb-5" style="margin-top: 9em">
+        <div class="row align-items-center">
+          <div class="col-md-6 col-12">
+            <img
+              class="
+                mr-auto
+                ml-auto
+                imgpro
+                mx-auto
+                d-block
+                rounded-circle
+                img-fluid
+              "
+              src="IMG_8459 (3).jpg"
+              alt=""
+            />
           </div>
+          <div class="col-md-6 col-12 my-auto justify-content-center p-5">
+            <h1 class="text-center">SAFWAN TALIPARAMBA</h1>
+            <h6 class="text-center" style="margin-top: 2px">
+              SOFTWARE DEVELOPER
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="col-md-4 col-12 p-5 pl-5 d-flex justify-content-center">
-              
-            <div class="card ml-3" style="width: 16rem;">
-              <img class="card-img-top img-fluid cardimg " src="vfximg002.webp" alt="Card image cap">
+    <!--home-section -ends-->
+
+    <!--sevice section-->
+    <section style="background: black">
+      <div class="container-fluid">
+        <div class="row" id="services">
+          <div>
+            <h1 class="text-center mt-5" style="color: #00ff84">Services</h1>
+          </div>
+          <div class="col-md-4 col-12 p-5 pl-5 d-flex justify-content-center mb-5">
+            <div class="card ml-3" style="width: 16rem">
+              <a href="https://en.wikipedia.org/wiki/Web_development">
+              <img
+                class="card-img-top img-fluid cardimg"
+                src="top11.webp"
+                alt="Card image cap"
+              />
+            </a>
               <div class="card-body">
-                <h5 class="card-title text-center">VFX ARTIST</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                
+                <h5 class="card-title text-center">
+                  WEB DEVELOPER<br />
+                </h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
               </div>
+            </div>
           </div>
-        </div>
-
-        <div class="col-md-4 col-12 p-5 pl-5 d-flex justify-content-center" >
-              
-          <div class="card ml-3" style="width: 16rem;">
-            <img class="card-img-top img-fluid cardimg " src="3d2d.webp" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title text-center">3D/2D ANIMATOR</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              
-            </div>
-        </div>
-      </div>
-
-         </div> 
-          
-        </div>
-
-  </section>
-
-
-            <!---service -section -ends-->
-
-            <!--skill section-->
-
-
-
-  <section id="skills">
-
-    <div class="container-fluid" style="background:#00ff84;">
-
-      <div class="row align-items-center skills">
-
-        <h1 class="text-center mt-5 mb-5" >Skills</h1>
-
-
-
-          
-            <div class="col-md-6 col-12 align-items-center  justify-content-center p-4 pb-1 pt-1" >
-              <span style="margin-bottom: 2em;"><B>HTML</B></span>
-              <span style="float: right ;"><b>99%</b></span><br>
-              <div class="progress" style="width: 100%;">
-                <div class="progress-bar " role="progressbar" style="width: 99%;background: black;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-           </div>
-
-           <div class="col-md-6 col-12 align-items-center  justify-content-center p-4 pb-1 pt-1" >
-            <span style="margin-bottom: 2em;"><B>CSS</B></span>
-            <span style="float: right ;"><b>90%</b></span><br>
-            <div class="progress" style="width: 100%;">
-              <div class="progress-bar " role="progressbar" style="width: 90%;background: black;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-         </div>
-
-         <div class="col-md-6 col-12 align-items-center  justify-content-center p-4 pb-1 pt-1" >
-          <span style="margin-bottom: 2em;"><B>JS</B></span>
-          <span style="float: right ;"><b>70%</b></span><br>
-          <div class="progress" style="width: 100%;">
-            <div class="progress-bar " role="progressbar" style="width: 70%;background: black;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-          </div>
-       </div>
-
-       <div class="col-md-6 col-12 align-items-center  justify-content-center p-4 pb-1 pt-1" >
-        <span style="margin-bottom: 2em;"><B>JQUERY</B></span>
-        <span style="float: right ;"><b>70%</b></span><br>
-        <div class="progress" style="width: 100%;">
-          <div class="progress-bar " role="progressbar" style="width: 70%;background: black;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-     </div>
-
-     <div class="col-md-6 col-12 align-items-center  justify-content-center p-4 pb-1 pt-1" >
-      <span style="margin-bottom: 2em;"><B>PHOTOSHOP</B></span>
-      <span style="float: right ;"><b>95%</b></span><br>
-      <div class="progress" style="width: 100%;">
-        <div class="progress-bar " role="progressbar" style="width: 95%;background: black;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-      </div>
-   </div>
-
-   <div class="col-md-6 col-12 align-items-center  justify-content-center p-4 pb-1 pt-1" >
-    <span style="margin-bottom: 2em;"><B>ILLUSTRATOR</B></span>
-    <span style="float: right ;"><b>90%</b></span><br>
-    <div class="progress" style="width: 100%;">
-      <div class="progress-bar " role="progressbar" style="width: 90%;background: black;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
- </div>
-      
-    </div>
-    </div>
-  </section>
-
-  <!---skill-section -ends-->
-
-
-  <!---contact section -->
-
-  <section class="bg-dark" id="contact">
-
-    <div class="container-fluid">
-      <div class="row">
-
-        <h1 class="text-center mt-5 " style="color:#00ff84;">
-          Contact me
-        </h1>
-
-        <div class=""  >
-          <form  id="" action="">
-            <div class="form-row">
-              <div class="form-group col-md-6 p-2 col-12 " style="float: left;">
-                <label for="fname">Name</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="name">
-              </div>
-              <div class="form-group col-md-6 col-12 p-2 " style="float: left;">
-                <label for="lmame">mobile</label>
-                <input type="number" class="form-control" id="inputPassword4" placeholder="mobile">
-              </div>
-            </div>
-            <div class="form-group col-12 col-md-12 p-2 pb-4">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="inputAddress" placeholder="email">
-            </div>
-
-            
-            <div class=" p-2">
-              <label for="message">message</label>
-              <textarea name="Text1"  rows="5" placeholder="message" class="col-md-12 col-12 form-control"></textarea>
-            </div>
-
-            
-
-            <div class="p-2 " style="margin-bottom: 6em;">
-             <a href="" style="text-decoration: none;">
-              <button type="submit" class="col-md-12 col-12 p-2 form-control " style="background-color: #00ff84;" >Send</button>
-             </a>
-
-            </div>
-            
-            
-          </form>
-        </div>
-
-
-        
-      </div>
-    </div>
-
-  </section>
-  
-
-  <!---contact -section -ends-->
-
- 
-
-
-  <!---footer-->
-
-
-  <footer style="background: #00ff84;">
-
-    <div class="container  ">
-      <div class="row d-flex justify-content-center ">
-        <div class="col-12 col-md-6  mt-3 mb-5 text-center">
-          
-            <i class="fas fa-copyright pt-1"></i>
-          
-          <span><p>copyright</p></span>
-          <a href="https://www.linkedin.com/in/safwan-taliparamba-6b8aa61ba/" style="color: black;">
-            <span ><i class="fab fa-linkedin display-1"></i></span>
-          </a>
-          <a href="https://wa.me/7994720767?text=hii" style="color: black;"><span><i class="fab fa-whatsapp-square display-1"></i></span></a>
-            <a href="https://www.instagram.com/safwantaliparamba/?utm_medium=copy_link" style="color: black;"><i class="fab fa-instagram-square display-1"></i></a>
-          
-          
 
          
         </div>
-
-        
       </div>
-    </div>
+    </section>
 
+    <!---service -section -ends-->
 
+    <!--skill section-->
 
-  </footer>
+    <section id="skills">
+      <div class="container-fluid" style="background: #00ff84">
+        <div class="row align-items-center skills">
+          <h1 class="text-center mt-5 mb-5">Skills</h1>
 
-  <!---footer -ends-->
+          <div
+            class="
+              col-md-6 col-12
+              align-items-center
+              justify-content-center
+              p-4
+              pb-1
+              pt-1
+            "
+          >
+            <span style="margin-bottom: 2em"><b>HTML</b></span>
+            <span style="float: right"><b>99%</b></span
+            ><br />
+            <div class="progress" style="width: 100%">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 99%; background: black"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
 
- 
+          <div
+            class="
+              col-md-6 col-12
+              align-items-center
+              justify-content-center
+              p-4
+              pb-1
+              pt-1
+            "
+          >
+            <span style="margin-bottom: 2em"><b>CSS</b></span>
+            <span style="float: right"><b>90%</b></span
+            ><br />
+            <div class="progress" style="width: 100%">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 90%; background: black"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
 
-  
+          <div
+            class="
+              col-md-6 col-12
+              align-items-center
+              justify-content-center
+              p-4
+              pb-1
+              pt-1
+            "
+          >
+            <span style="margin-bottom: 2em"><b>Javascript</b></span>
+            <span style="float: right"><b>96%</b></span
+            ><br />
+            <div class="progress" style="width: 100%">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 96%; background: black"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+          <div
+            class="
+              col-md-6 col-12
+              align-items-center
+              justify-content-center
+              p-4
+              pb-1
+              pt-1
+            "
+          >
+            <span style="margin-bottom: 2em"><b>JQUERY</b></span>
+            <span style="float: right"><b>90%</b></span
+            ><br />
+            <div class="progress" style="width: 100%">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width:90%; background: black"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
 
+          <div
+            class="
+              col-md-6 col-12
+              align-items-center
+              justify-content-center
+              p-4
+              pb-1
+              pt-1
+            "
+          >
+            <span style="margin-bottom: 2em"><b>PHOTOSHOP</b></span>
+            <span style="float: right"><b>95%</b></span
+            ><br />
+            <div class="progress" style="width: 100%">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 95%; background: black"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
 
-    
+          <div
+            class="
+              col-md-6 col-12
+              align-items-center
+              justify-content-center
+              p-4
+              pb-1
+              pt-1
+            "
+          >
+            <span style="margin-bottom: 2em"><b>ILLUSTRATOR</b></span>
+            <span style="float: right"><b>90%</b></span
+            ><br />
+            <div class="progress" style="width: 100%">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 90%; background: black"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!---skill-section -ends-->
 
+    <!---contact section -->
 
+    <section class="bg-dark" id="contact">
+      <div class="container-fluid">
+        <div class="row">
+          <h1 class="text-center mt-5" style="color: #00ff84">Contact me</h1>
 
-</body>
-</html> 
+          <div class="">
+            <form  action="https://formspree.io/f/mdoyvenv"
+            method="POST">
+              <div class="form-row">
+                <div class="form-group col-md-6 p-2 col-12" style="float: left">
+                  <label for="fname">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputEmail4"
+                    placeholder="name"
+                    name="name"
+                  />
+                </div>
+                <div class="form-group col-md-6 col-12 p-2" style="float: left">
+                  <label for="lmame">mobile</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="inputPassword4"
+                    placeholder="mobile"
+                  />
+                </div>
+              </div>
+              <div class="form-group col-12 col-md-12 p-2 pb-4">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="email"
+                  name="_replyto"
+                />
+              </div>
 
+              <div class="p-2">
+                <label for="message">message</label>
+                <textarea
+                  name="Text1"
+                  rows="5"
+                  placeholder="message"
+                  class="col-md-12 col-12 form-control"
+                  name="message"
+                ></textarea>
+              </div>
 
+              <div class="p-2" style="margin-bottom: 6em">
+                <a href="" style="text-decoration: none">
+                  <button
+                    type="submit"
+                    class="col-md-12 col-12 p-2 form-control"
+                    style="background-color: #00ff84"
+                  >
+                    Send
+                  </button>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!---contact -section -ends-->
 
+    <!---footer-->
+
+    <footer style="background: #00ff84">
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-6 mt-3 mb-5 text-center">
+            <i class="fas fa-copyright pt-1"></i>
+
+            <span><p>copyright</p></span>
+            <a
+              href="https://www.linkedin.com/in/safwan-taliparamba-517b9821a"
+              style="color: black"
+            >
+              <span><i class="fab fa-linkedin display-1"></i></span>
+            </a>
+            <a href="https://wa.me/7994720767?text=hii" style="color: black"
+              ><span><i class="fab fa-whatsapp-square display-1"></i></span
+            ></a>
+            <a
+              href="https://www.instagram.com/safwantaliparamba_/?utm_medium=copy_link"
+              style="color: black"
+              ><i class="fab fa-instagram-square display-1"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!---footer -ends-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
